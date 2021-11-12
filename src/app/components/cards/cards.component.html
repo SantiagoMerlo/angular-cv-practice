@@ -1,0 +1,10 @@
+<div class="background-color-white box-shadow app-card p-1">
+    <img class="img p-2" src={{item?.img}} />
+    <div class="text">
+        <ng-container *ngIf="!!item?.start_time">
+            <p class="color-gray font-size-little p-top-2 text-align-left">{{item?.start_time}} - {{item?.end_time}}</p>
+        </ng-container>
+        <h5 class="text-align-left">{{item?.title}}</h5>
+        <p class="text-align-left">{{item?.description}}</p>
+    </div>
+</div>

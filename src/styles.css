@@ -1,1 +1,521 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    /* VAR */
+    --size-change: 4px;
+    /* COLORS */
+    --none: transparent;
+    --purple: #8D00FF;
+    --white: #FFF;
+    --dark: #1C1A1C;
+    --secondary-color: #565656;
+  
+    /* BOX SHADOW */
+    --box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+  
+    /* TIPOGRAFY SIZE */
+    --font-size-little: x-small; /*14px;*/
+    --font-size-small: small; /*16px;*/
+    --font-size-normal: medium; /*18px;*/
+    --font-size-large: large; /*20px;*/
+    --font-size-extra-large: larger; /*22px;*/
+    --font-size-big: x-large; /*26px;*/
+    --font-size-extra-big: xx-large; /*30px;*/
+  
+    /* STANDARD HEIGHT */
+    --height-m: 40px;
+    --height-b: 120px;
+  
+    /* MARGIN */
+    --margin-top: 25px;
+    --margin-bottom: 26px;
+  
+    /* BORDER */
+    --border-small: 5px;
+    --border-normal: 15px;
+    --border-big: 30px;
+    --border-circle: 1000px;
+  
+    /* TIPOGRAFY WEIGHT */
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semi-bold: 600;
+    --weight-bold: 700;
+    --weight-extra-bold: 800;
+    --weight-black: 900;
+  }
+  
+  body,
+  html {
+    font-family: "Poppins", sans-serif !important;
+    background-color: var(--dark) !important;
+    overflow-x: hidden;
+    margin: 0px;
+  }
+  
+  body {
+    overflow: hidden;
+  }
+  
+  /* SCROLLBAR */
+  /* width */
+  *::-webkit-scrollbar {
+    position: fixed !important;
+    right: 0px !important;
+    width: 5px !important;
+  }
+  
+  /* Track */
+  *::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+  
+  /* Handle */
+  *::-webkit-scrollbar-thumb {
+    background: var(--dark-gray) !important;
+    border-radius: var(--border-normal) !important;
+  }
+  
+  /* Handle on hover */
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-gray) !important;
+  }
+  
+  .hover:hover {
+    cursor: pointer;
+  }
+  
+  input,
+  select,
+  textarea,
+  label {
+    font-family: "Poppins", sans-serif !important;
+    font-size: var(--font-size-small);
+  }
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus,
+  select:-webkit-autofill:active,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  textarea:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--gray);
+    box-shadow: 0 0 0px 30px var(--dark-gray) inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  ul,
+  select,
+  input,
+  option,
+  li {
+    font-family: "Poppins", sans-serif !important;
+    color: var(--secondary-color);
+    margin: 2px;
+  }
+  h1 {
+    font-size: var(--font-size-extra-big);
+    font-weight: var(--weight-black);
+  }
+  h2 {
+    font-size: var(--font-size-big);
+    font-weight: var(--weight-semi-bold);
+  }
+  h3 {
+    font-size: var(--font-size-extra-large);
+    font-weight: var(--weight-bold);
+  }
+  h4 {
+    font-weight: var(--weight-extra-bold);
+  }
+  h5 {
+    font-weight: var(--weight-bold);
+  }
+  h6 {
+    font-weight: var(--weight-bold);
+  }
+  p,
+  li {
+    font-size: var(--font-size-small);
+  }
+  
+  
+  /* BORDERS RADIUS */
+  .border-small {
+    border-radius: var(--border-small) !important;
+  }
+  .border-normal {
+    border-radius: var(--border-normal) !important;
+  }
+  .border-big {
+    border-radius: var(--border-big) !important;
+  }
+  .border-circle {
+    border-radius: var(--border-circle) !important;
+  }
+  
+  /* Align Text */
+  .text-align-center {
+    text-align: center !important;
+  }
+  .text-align-left {
+    text-align: left !important;
+  }
+  .text-align-right {
+    text-align: right !important;
+  }
+  .text-align-justify {
+    text-align: justify !important;
+  }
+  
+  /* Vertical Align */
+  .vertical-align-baseline {
+    vertical-align: baseline;
+  }
+  .vertical-align-sub {
+    vertical-align: sub;
+  }
+  .vertical-align-super {
+    vertical-align: super;
+  }
+  .vertical-align-text-top {
+    vertical-align: text-top;
+  }
+  .vertical-align-text-bottom {
+    vertical-align: text-bottom;
+  }
+  .vertical-align-middle {
+    vertical-align: middle;
+  }
+  .vertical-align-top {
+    vertical-align: top;
+  }
+  .vertical-align-bottom {
+    vertical-align: bottom;
+  }
+  
+  /* Font Weight */
+  .w100 {
+    font-weight: 100 !important;
+  }
+  .w200 {
+    font-weight: 200 !important;
+  }
+  .w300 {
+    font-weight: 300 !important;
+  }
+  .w400 {
+    font-weight: 400 !important;
+  }
+  .w500 {
+    font-weight: 500 !important;
+  }
+  .w600 {
+    font-weight: 600 !important;
+  }
+  .w700 {
+    font-weight: 700 !important;
+  }
+  .w800 {
+    font-weight: 800 !important;
+  }
+  .w900 {
+    font-weight: 900 !important;
+  }
+  
+  /* Margin */
+  .m-0 {
+    margin: 0px !important;
+  }
+  .m-1 {
+    margin: 6px !important;
+  }
+  .m-2 {
+    margin: 12px !important;
+  }
+  .m-3 {
+    margin: 24px !important;
+  }
+  .m-4 {
+    margin: 30px !important;
+  }
+  .m-5 {
+    margin: 36px !important;
+  }
+  .m-6 {
+    margin: 42px !important;
+  }
+  .m-left-1 {
+    margin-left: 6px !important;
+  }
+  .m-left-2 {
+    margin-left: 12px !important;
+  }
+  .m-left-3 {
+    margin-left: 24px !important;
+  }
+  .m-left-4 {
+    margin-left: 30px !important;
+  }
+  .m-left-5 {
+    margin-left: 36px !important;
+  }
+  .m-left-6 {
+    margin-left: 42px !important;
+  }
+  .m-top-1 {
+    margin-top: 6px !important;
+  }
+  .m-top-2 {
+    margin-top: 12px !important;
+  }
+  .m-top-3 {
+    margin-top: 24px !important;
+  }
+  .m-top-4 {
+    margin-top: 30px !important;
+  }
+  .m-top-5 {
+    margin-top: 36px !important;
+  }
+  .m-top-6 {
+    margin-top: 42px !important;
+  }
+  .m-bottom-1 {
+    margin-bottom: 6px !important;
+  }
+  .m-bottom-2 {
+    margin-bottom: 12px !important;
+  }
+  .m-bottom-3 {
+    margin-bottom: 24px !important;
+  }
+  .m-bottom-4 {
+    margin-bottom: 30px !important;
+  }
+  .m-bottom-5 {
+    margin-bottom: 36px !important;
+  }
+  .m-bottom-6 {
+    margin-bottom: 42px !important;
+  }
+  .m-right-1 {
+    margin-right: 6px !important;
+  }
+  .m-right-2 {
+    margin-right: 12px !important;
+  }
+  .m-right-3 {
+    margin-right: 24px !important;
+  }
+  .m-right-4 {
+    margin-right: 30px !important;
+  }
+  .m-right-5 {
+    margin-right: 36px !important;
+  }
+  .m-right-6 {
+    margin-right: 42px !important;
+  }
+  
+  /* Padding */
+  .p-0 {
+    padding: 0px !important;
+  }
+  .p-05 {
+    padding: 3px !important;
+  }
+  .p-1 {
+    padding: 6px !important;
+  }
+  .p-2 {
+    padding: 12px !important;
+  }
+  .p-3 {
+    padding: 24px !important;
+  }
+  .p-4 {
+    padding: 30px !important;
+  }
+  .p-5 {
+    padding: 36px !important;
+  }
+  .p-6 {
+    padding: 42px !important;
+  }
+  .p-left-1 {
+    padding-left: 6px !important;
+  }
+  .p-left-2 {
+    padding-left: 12px !important;
+  }
+  .p-left-3 {
+    padding-left: 24px !important;
+  }
+  .p-left-4 {
+    padding-left: 30px !important;
+  }
+  .p-left-5 {
+    padding-left: 36px !important;
+  }
+  .p-left-6 {
+    padding-left: 42px !important;
+  }
+  .p-top-1 {
+    padding-top: 6px !important;
+  }
+  .p-top-2 {
+    padding-top: 12px !important;
+  }
+  .p-top-3 {
+    padding-top: 24px !important;
+  }
+  .p-top-4 {
+    padding-top: 30px !important;
+  }
+  .p-top-5 {
+    padding-top: 36px !important;
+  }
+  .p-top-6 {
+    padding-top: 42px !important;
+  }
+  .p-bottom-1 {
+    padding-bottom: 6px !important;
+  }
+  .p-bottom-2 {
+    padding-bottom: 12px !important;
+  }
+  .p-bottom-3 {
+    padding-bottom: 24px !important;
+  }
+  .p-bottom-4 {
+    padding-bottom: 30px !important;
+  }
+  .p-bottom-5 {
+    padding-bottom: 36px !important;
+  }
+  .p-bottom-6 {
+    padding-bottom: 42px !important;
+  }
+  .p-right-1 {
+    padding-right: 6px !important;
+  }
+  .p-right-2 {
+    padding-right: 12px !important;
+  }
+  .p-right-3 {
+    padding-right: 24px !important;
+  }
+  .p-right-4 {
+    padding-right: 30px !important;
+  }
+  .p-right-5 {
+    padding-right: 36px !important;
+  }
+  .p-right-6 {
+    padding-right: 42px !important;
+  }
+  
+  /* Overflow text */
+  .text-overflow-clip {
+    text-overflow: clip !important;
+  }
+  
+  .text-overflow-ellipsis {
+    text-overflow: ellipsis !important;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  /* Font-Size */
+  .font-size-little {
+    font-size: var(--font-size-little) !important;
+  }
+  .font-size-small {
+    font-size: var(--font-size-small) !important;
+  }
+  .font-size-normal {
+    font-size: var(--font-size-normal) !important;
+  }
+  .font-size-large {
+    font-size: var(--font-size-large) !important;
+  }
+  .font-size-extra-large {
+    font-size: var(--font-size-extra-large) !important;
+  }
+  .font-size-big {
+    font-size: var(--font-size-big) !important;
+  }
+  .font-size-extra-big {
+    font-size: var(--font-size-extra-big) !important;
+  }
+  
+  /* TRANSFORM */
+  .text-capitalize {
+    text-transform: capitalize !important;
+  }
+  
+  .first-letter-cap::first-letter {
+    text-transform: uppercase;
+  }
+  
+  .number-style {
+    font-family: "Manrope", sans-serif !important;
+  }
+  
+  /* OVERRIDE MATERIAL UI */
+  .MuiSkeleton-root {
+    background-color: var(--smooth-dark) !important;
+  }
+  
+  .box-shadow {
+    -webkit-box-shadow: 1px 2px 2px 2px #4e4e4e;
+    box-shadow: 0px 2px 8px 0px #4e4e4e;
+  }
+  
+  /* COLORS */
+
+  .color-dark {
+    color: var(--dark) !important;
+  }
+  .color-gray {
+    color: var(--gray) !important;
+  }
+  .color-purple {
+    color: var(--purple) !important;
+  }
+  .color-white {
+    color: var(--white) !important;
+  }
+
+  .background-color-dark {
+    background-color: var(--dark) !important;
+  }
+  .background-color-gray {
+    background-color: var(--gray) !important;
+  }
+  .background-color-purple {
+    background-color: var(--purple) !important;
+  }
+  .background-color-white {
+    background-color: var(--white) !important;
+  }
+
+@media only screen and (max-width: 600px) {
+    p {
+        font-size: var(--font-size-small) !important;
+    }
+}

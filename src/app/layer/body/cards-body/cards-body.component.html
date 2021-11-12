@@ -1,0 +1,15 @@
+<div id="work" class="m-top-2 m-bottom-2">
+    <h4 class="text-align-left p-left-4 p-right-4">{{label}}</h4>
+    <div style="display: flex; align-items: center; vertical-align: middle;">
+        <div class="p-left-4 p-right-4" [ngStyle]="{'width': isMobile ? '100%' : '60%'}">
+            <ng-template ngFor let-item [ngForOf]="items" let-i="index">
+                <app-card [item]="item"></app-card>
+            </ng-template>
+        </div>
+        <ng-container *ngIf="!isMobile">
+            <div class="p-2" style="width: 40%;">
+                <img style="width: 100%; object-fit: contain;" src={{img}} >
+            </div>
+        </ng-container>
+    </div>
+</div>

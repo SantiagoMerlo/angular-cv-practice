@@ -1,0 +1,30 @@
+<div class="app-body">
+    <div class="app-body-all p-top-2 p-bottom-2">
+        <div style="width: 100%; max-height: 100%; display: grid; overflow-y: auto;">
+            <app-presentation></app-presentation>
+            <div style="width: 100%;">
+                <h4 class="text-align-left p-left-4 p-right-4">{{skills_title}}</h4>
+                <div class="p-left-4 p-right-4">
+                    <ng-template ngFor let-item [ngForOf]="skills_items" let-i="index">
+                        <app-chip [label]="item"></app-chip>
+                    </ng-template>
+                </div>
+            </div>
+            <div class="m-top-2 m-bottom-2" style="width: 100%;">
+                <h4 class="text-align-left p-left-4 p-right-4">{{tecnologies_title}}</h4>
+                <div class="p-left-4 p-right-4">
+                    <ng-template ngFor let-item [ngForOf]="tecnologies_items" let-i="index">
+                        <app-chip [label]="item"></app-chip>
+                    </ng-template>
+                </div>
+            </div>
+            <app-cards-body id="work" label={{work_title}} [items]=work_items img={{work_img}} [isMobile]=isMobile>
+            </app-cards-body>
+            <app-cards-body id="studies" label={{studies_title}} [items]=studies_items img={{studies_img}} [isMobile]=isMobile>
+            </app-cards-body>
+            <app-cards-body id="game" label={{game_title}} [items]=game_items img={{game_img}} [isMobile]=isMobile>
+            </app-cards-body>
+            <app-mail></app-mail>
+        </div>
+    </div>
+</div>

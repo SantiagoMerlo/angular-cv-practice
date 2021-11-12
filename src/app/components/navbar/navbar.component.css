@@ -1,0 +1,61 @@
+.app-navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 20%;
+    background-color: var(--purple);
+}
+
+.app-navbar-invisible {
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+    justify-content: center;
+    gap: 40px;
+    left: 0px;
+    height: 100vh;
+    flex-direction: column;
+    width: 20%;
+}
+
+.app-navbar-invisible .items {
+    position: relative;
+    width: 100%;
+    left: 50px;
+}
+
+.app-navbar-invisible .items .img:hover {
+    cursor: pointer;
+}
+
+.app-navbar-invisible .items .img{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    z-index: 1000 !important;
+}
+
+@media only screen and (max-width: 700px) {
+    .app-navbar {
+        top: auto;
+        bottom: 0px;
+        height: 20vh;
+        width: 100vw;
+    }
+
+    .app-navbar-invisible {
+        top: auto;
+        bottom: 0px;
+        height: 20vh;
+        width: 100vw;
+        flex-direction: row;
+    }
+
+    .app-navbar-invisible .items {
+        width: auto;
+        left: auto;
+        top: 65%;
+    }
+}
+

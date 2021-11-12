@@ -1,0 +1,16 @@
+.img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+.container {
+    display: flex;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: block;
+    }
+}
